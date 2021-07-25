@@ -6,7 +6,7 @@ import 'package:hoop_seek/screens/components/map.dart';
 import 'package:hoop_seek/utils/size_helpers.dart';
 import 'package:hoop_seek/utils/themes.dart';
 
-final double visiblePinPillPosition = 100;
+final double visiblePinPillPosition = 120;
 final double invisiblePinPillPosition = -220;
 
 class MapScreen extends StatefulWidget {
@@ -35,7 +35,7 @@ class _MapScreenState extends State<MapScreen> {
 
   void setCustomMarker() async {
     mapMarker = await BitmapDescriptor.fromAssetImage(
-        ImageConfiguration(devicePixelRatio: 2.5), 'assets/marker.png');
+        ImageConfiguration(devicePixelRatio: 2.5), 'assets/images/marker.png');
     print('hello');
   }
 
@@ -100,7 +100,7 @@ class _MapScreenState extends State<MapScreen> {
               ],
             )),
         Positioned(
-            bottom: 0,
+            bottom: -20,
             left: 0,
             right: 0,
             child: Padding(
@@ -108,7 +108,7 @@ class _MapScreenState extends State<MapScreen> {
                     sizer.sx(kPadding), 0, sizer.sx(kPadding), 0),
                 child: WidgetBackground(
                     child: Container(
-                  height: sizer.sx(0.96),
+                  height: sizer.sx(0.85),
                   child: SingleChildScrollView(
                     child: Column(
                       children: [
@@ -128,7 +128,6 @@ class _MapScreenState extends State<MapScreen> {
                           },
                         ),
                         ListView.builder(
-                          
                             shrinkWrap: true,
                             physics: NeverScrollableScrollPhysics(),
                             scrollDirection: Axis.vertical,

@@ -32,8 +32,8 @@ class _LoginState extends State<Login> {
                   ),
                   Image(
                     image: BrandTheme.isLight
-                        ? AssetImage('assets/logo2.png')
-                        : AssetImage('assets/logo.png'),
+                        ? AssetImage('assets/images/logo2.png')
+                        : AssetImage('assets/images/logo.png'),
                     width: sizer.sx(.21),
                     height: sizer.sx(.21),
                   ),

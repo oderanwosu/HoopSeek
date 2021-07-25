@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hoop_seek/utils/brand_icons_icons.dart';
 import 'package:hoop_seek/utils/constants.dart';
 import 'package:hoop_seek/utils/size_helpers.dart';
 import 'package:hoop_seek/utils/themes.dart';
@@ -46,7 +47,10 @@ class _MatchInfoState extends State<MatchInfo> {
           children: [
             Row(
               children: [
-                Icon(Icons.ac_unit),
+                Icon(
+                  BrandIcons.gamefullcourt,
+                  size: sizer.sx(0.14),
+                ),
                 SizedBox(
                   width: sizer.sx(0.04),
                 ),

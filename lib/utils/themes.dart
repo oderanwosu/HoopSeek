@@ -32,6 +32,9 @@ class BrandTheme {
         primaryColorLight: colorPrimaryLight,
         textTheme: ThemeData.dark().textTheme.apply(fontFamily: brandFont),
         scaffoldBackgroundColor: colorBackground,
+        bottomAppBarTheme: BottomAppBarTheme(
+          
+        ),
         primaryTextTheme:
             ThemeData.dark().textTheme.apply(fontFamily: brandFont),
         accentTextTheme:

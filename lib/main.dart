@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hoop_seek/screens/authentication/login.dart';
+import 'package:hoop_seek/screens/home.dart';
 import 'package:hoop_seek/screens/map.dart';
 import 'package:hoop_seek/utils/themes.dart';
 
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: BrandTheme.darkTheme,
+      theme: BrandTheme.lightTheme,
       routes: {
         // When navigating to the "/" route, build the FirstScreen widget.
         '/login': (context) => Login(),
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
         '/register': (context) => Register(),
         '/map': (context) => MapScreen(),
       },
-      home: Login(),
+      home: HomeScreen(),
     );
   }
 }

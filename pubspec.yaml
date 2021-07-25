@@ -50,7 +50,13 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/
+    - assets/images/
+    - assets/icons/
+  
+  fonts:
+    - family:  BrandIcons
+      fonts:
+       - asset: assets/icons/BrandIcons.ttf
     
   #   - images/a_dot_ham.jpeg
 
