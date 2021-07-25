@@ -78,6 +78,7 @@ class _RegisterState extends State<Register> {
                     child: RichText(
                       text: TextSpan(
                         text: 'Login into your ',
+                        style: TextStyle(color: BrandTheme.colorFont),
                         children: <TextSpan>[
                           TextSpan(
                               text: 'existing account',
@@ -206,6 +207,7 @@ class _RegisterPasswordState extends State<RegisterPassword> {
                     child: RichText(
                       text: TextSpan(
                         text: 'Login into your ',
+                        style: TextStyle(color: BrandTheme.colorFont),
                         children: <TextSpan>[
                           TextSpan(
                               text: 'existing account',
@@ -328,6 +330,7 @@ class _RegisterEmailState extends State<RegisterEmail> {
                     child: RichText(
                       text: TextSpan(
                         text: 'Login into your ',
+                        style: TextStyle(color: BrandTheme.colorFont),
                         children: <TextSpan>[
                           TextSpan(
                               text: 'existing account',

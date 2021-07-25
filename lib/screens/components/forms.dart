@@ -8,13 +8,15 @@ class CustomTextField extends StatefulWidget {
   final bool isObscureText;
   final void Function(String)? onChanged;
   final String hintText;
+  final suffixIcon;
 
   CustomTextField(
       {this.label = '',
       required this.validator,
       required this.onChanged,
       this.isObscureText = false,
-      this.hintText = ''});
+      this.hintText = '',
+      this.suffixIcon});
 
   @override
   _CustomTextFieldState createState() => _CustomTextFieldState();
@@ -39,11 +41,14 @@ class _CustomTextFieldState extends State<CustomTextField> {
         child: TextFormField(
           onChanged: widget.onChanged,
           obscureText: widget.isObscureText,
-          decoration: new InputDecoration(
+          decoration: InputDecoration(
+            suffixIcon: widget.suffixIcon,
             hintText: widget.hintText,
-            border: new OutlineInputBorder(
-              borderRadius: new BorderRadius.circular(8.0),
-              borderSide: new BorderSide(),
+            enabledBorder: OutlineInputBorder(
+                borderSide: BorderSide(color: BrandTheme.colorPrimaryLight)),
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(8.0),
+              borderSide: BorderSide(),
             ),
           ),
           validator: widget.validator,
@@ -71,7 +76,6 @@ class _CustomButtonState extends State<CustomButton> {
   Widget build(BuildContext context) {
     final SizeHelper sizer = SizeHelper(context);
     return Container(
-        width: double.infinity,
         height: sizer.sy(.06),
         decoration: BoxDecoration(
           color: BrandTheme.colorPrimary,
