@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:hoop_seek/utils/constants.dart';
 import 'package:hoop_seek/utils/size_helpers.dart';
 
-import 'forms.dart';
-import 'map.dart';
+import 'forms-components.dart';
+import 'match-components.dart';
 
 class MatchSearchWidget extends StatefulWidget {
   const MatchSearchWidget({Key? key}) : super(key: key);

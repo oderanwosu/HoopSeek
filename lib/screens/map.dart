@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:hoop_seek/screens/components/forms.dart';
+import 'package:hoop_seek/screens/components/forms-components.dart';
 import 'package:hoop_seek/utils/constants.dart';
-import 'package:hoop_seek/screens/components/map.dart';
+import 'package:hoop_seek/screens/components/match-components.dart';
 import 'package:hoop_seek/utils/size_helpers.dart';
 import 'package:hoop_seek/utils/themes.dart';
 
@@ -147,7 +147,10 @@ class _MapScreenState extends State<MapScreen> {
                                           ],
                                         )
                                       : SizedBox(),
-                                  MatchInfo(),
+                                  MatchInfo(
+                                    active: true,
+                                  ),
+                                  Divider(),
                                   SizedBox(height: sizer.sx(kPadding))
                                 ],
                               );

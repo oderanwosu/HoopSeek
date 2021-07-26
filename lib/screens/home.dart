@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hoop_seek/screens/map.dart';
+import 'package:hoop_seek/screens/record.dart';
 import 'package:hoop_seek/utils/brand_icons_icons.dart';
 import 'package:hoop_seek/utils/size_helpers.dart';
 import 'package:hoop_seek/utils/themes.dart';
@@ -15,7 +16,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int _currentIndex = 0;
-  final List<Widget> _children = [MapScreen(), Login()];
+  final List<Widget> _children = [MapScreen(), RecordScreen()];
 
   void _onItemTapped(int index) async {
     // add the setstate callback here

@@ -30,7 +30,8 @@ class _MatchQuickViewState extends State<MatchQuickView> {
 }
 
 class MatchInfo extends StatefulWidget {
-  const MatchInfo({Key? key}) : super(key: key);
+  var active;
+  MatchInfo({bool this.active = false});
 
   @override
   _MatchInfoState createState() => _MatchInfoState();
@@ -50,6 +51,7 @@ class _MatchInfoState extends State<MatchInfo> {
                 Icon(
                   BrandIcons.gamefullcourt,
                   size: sizer.sx(0.14),
+                  color: BrandTheme.colorPrimary,
                 ),
                 SizedBox(
                   width: sizer.sx(0.04),
@@ -103,7 +105,9 @@ class _MatchInfoState extends State<MatchInfo> {
                 SizedBox(
                   width: sizer.sx(0.08),
                 ),
-                TextButton(onPressed: () {}, child: Text('+JOIN MATCH'))
+                widget.active
+                    ? TextButton(onPressed: () {}, child: Text('+JOIN MATCH'))
+                    : Container()
               ],
             ),
           ],
