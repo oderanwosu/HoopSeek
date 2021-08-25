@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: BrandTheme.lightTheme,
+      theme: BrandTheme.darkTheme,
       routes: {
         // When navigating to the "/" route, build the FirstScreen widget.
         '/login': (context) => Login(),

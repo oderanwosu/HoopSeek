@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hoop_seek/screens/map.dart';
+import 'package:hoop_seek/screens/messages.dart';
+import 'package:hoop_seek/screens/profile.dart';
 import 'package:hoop_seek/screens/record.dart';
 import 'package:hoop_seek/utils/brand_icons_icons.dart';
 import 'package:hoop_seek/utils/size_helpers.dart';
@@ -16,7 +18,12 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int _currentIndex = 0;
-  final List<Widget> _children = [MapScreen(), RecordScreen()];
+  final List<Widget> _children = [
+    MapScreen(),
+    RecordScreen(),
+    MessagesScreen(),
+    ProfileScreen()
+  ];
 
   void _onItemTapped(int index) async {
     // add the setstate callback here
@@ -31,7 +38,6 @@ class _HomeScreenState extends State<HomeScreen> {
     final SizeHelper sizer = SizeHelper(context);
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
-        showSelectedLabels: false,
         showUnselectedLabels: true,
         selectedItemColor: BrandTheme.colorPrimary,
         unselectedItemColor: BrandTheme.colorDisabled,
@@ -51,10 +57,10 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              BrandIcons.record,
+              Icons.message_rounded,
               size: sizer.sx(0.07),
             ),
-            label: 'Frineds'.toUpperCase(),
+            label: 'Messages'.toUpperCase(),
           ),
           BottomNavigationBarItem(
               icon: Container(

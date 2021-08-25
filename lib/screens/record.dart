@@ -29,6 +29,7 @@ class _RecordScreenState extends State<RecordScreen> {
         padding: EdgeInsets.all(kPadding),
         child: SingleChildScrollView(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Divider(),
               ListView.builder(
